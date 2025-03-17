@@ -1,1 +1,300 @@
-dsad
+Ejercicio 1 
+Crea una aplicación que pida un número y calcule su factorial (La factorial de un número es el 
+producto de todos los enteros entre 1 y el propio número y se representa por el número 
+seguido de un signo de exclamación. ¡Por ejemplo 5! = 1x2x3x4x5=120)
+
+1) Algoritmo Los_factorial
+	
+	Leer A
+	
+	Si A < 0 Entonces
+		Escribir "No debe ser un numero negativo"
+	SiNo
+		Esto <- 1
+		Para I<-1 Hasta A
+			Esto <- Esto * I
+		Fin Para
+	Fin Si
+	
+	Escribir "El factorial de " A " Es: " Esto
+FinAlgoritmo
+
+
+Ejercicio 2
+Crea una aplicación que permita adivinar un número. La aplicación genera un número 
+aleatorio del 1 al 100. A continuación, va pidiendo números y va respondiendo si el número a 
+adivinar es mayor o menor que el introducido, además de los intentos que te quedan (tienes 
+10 intentos para acertarlo). El programa termina cuando se acierta el número (además te dice 
+en cuantos intentos lo has acertado), si se llega al límite de intentos te muestra el número que 
+había generado. 
+
+2) Algoritmo Acertar
+	
+	Algo <- Aleatorio(1, 100)
+	Escribir Algo
+	Escribir "Escribe un numero del 1 al 100"
+	
+	IntentosRealizados <- 0
+	Acertado <- Verdadero
+	Para Eso<-10 Hasta 0 Con Paso -1 Hacer
+		Si Acertado Entonces
+			Escribir "Tienes " Eso " intentos"
+			Leer Ello
+			IntentosRealizados <- IntentosRealizados + 1
+			Si Ello < Algo Entonces
+				Escribir "El numero A buscar es mayor"
+			SiNo
+				Si Ello > Algo Entonces
+					Escribir "El numero a buscar es menor"
+					
+				FinSi
+			FinSi
+			Si Ello = Algo entonces
+				Escribir "Acertaste en " IntentosRealizados " intentos!!"
+				Acertado <- Falso
+			FinSi
+		Fin Si
+	Fin Para
+	
+	Si Ello <> Algo Entonces
+		Escribir "No acertaste... El numero era: " Algo
+	Fin Si
+
+FinAlgoritmo
+
+
+Ejercicio 3
+Algoritmo que pida números hasta que se introduzca un cero. Debe imprimir la suma y la 
+media de todos los números introducidos.
+
+3) Algoritmo SumaYMedia
+	Definir Suma, Media, Ello Como Real
+	Suma <- 0
+	Media <- 0
+	Repetir
+		Escribir "Pon un numero (Al poner 0 se detendra)"
+		Leer ello
+		Si ello <> 0 Entonces
+			Suma <- Suma + Ello
+			Media <- Media + 1
+		Fin Si
+	Hasta Que Ello = 0
+	
+	Si Media  > 0 Entonces
+		Escribir "La suma de todos los numeros es: " Suma
+		Escribir "La media de todos los numeros es: " Suma / Media
+	Sino
+		Escribir "No ingresaste ningun numero valido"
+	Fin Si
+FinAlgoritmo
+
+
+Ejercicio 4
+Realizar un algoritmo que pida números (se pedirá por teclado la cantidad de números a 
+introducir). El programa debe informar de cuantos números introducidos son mayores que 0, 
+menores que 0 e iguales a 0.
+
+4) Algoritmo Numb_0
+	
+	Esto <- Aleatorio(2,10)
+	
+	Definir Numb Como Real
+	Escribir Esto
+	
+	Escribir "Pon " Esto " numeros y se verificaran si son mayores, menores o iguales a 0"
+	Repetir
+		Ello <- Ello + 1
+		Leer Numb
+		Si Numb > 0 Entonces
+			Escribir "Este numero es mayor a 0"
+			Nub1 <- Nub1 + 1
+		SiNo
+			Si Numb < 0 Entonces
+				Escribir "Este numero es menor a 0"
+				Nub2 <- Nub2 + 1
+			SiNo
+				Escribir "Este numero es igual a 0"
+				Nub3 <- Nub3 + 1
+			FinSi
+		Fin Si
+		
+	Hasta Que  Ello = Esto
+	
+	Escribir "Hubo: " Nub1 " mayores a 0"
+	Escribir "Hubo: " Nub2 " menores a 0"
+	Escribir "Hubo: " Nub3 " iguales a 0"
+FinAlgoritmo
+
+
+Ejercicio 5 
+Algoritmo que pida caracteres e imprima ‘VOCAL’ si son vocales y ‘NO VOCAL’ en caso 
+contrario, el programa termina cuando se introduce un espacio.
+
+5) Algoritmo Vocales
+	
+	Definir Este Como Caracter
+	
+	Repetir
+		Escribir "Introduzca una letra o vocal (introduzca espacio para parar"
+		Leer Este
+		
+		Si Este = "a" O Este = "e" O Este = "i" O Este = "o" O Este = "u" Entonces
+			
+			Escribir "VOCAL"
+		SiNo
+			Escribir "NO VOCAL"
+		Fin Si
+		
+	Hasta Que Este = " "
+	
+FinAlgoritmo
+
+
+Ejercicio 6 
+Escribir un programa que imprima todos los números pares entre dos números que se le pidan 
+al usuario.
+
+6) Algoritmo Pares
+	
+	Escribir "Pon un numero"
+	Leer Numb1
+	Escribir "Pon otro numero"
+	Leer Numb2
+	
+	Si Numb1 > Numb2 Entonces
+        Definir temp Como Entero
+        temp <- Numb1
+        Numb1 <- Numb2
+		Numb2 <- temp
+    FinSi
+	
+	Escribir "Números pares entre ", Numb1 " y ", Numb2 ":"
+	
+	Para i<-Numb1 Hasta Numb2
+		Si i MOD 2 = 0 Entonces
+			Escribir i
+		FinSi
+	Fin Para
+	
+FinAlgoritmo
+
+
+Ejercicio 7 
+Realizar un algoritmo que muestre la tabla de multiplicar de un número introducido por 
+teclado.
+
+7) Algoritmo Tablas
+	
+	Escribir "Pon Un numero y te muestro su tabla del 1 al 10"
+	Leer Mult
+	Escribir "Su tabla del 1 al 10 es:"
+	
+	Para A <- 1 Hasta 10
+		Este <- A * Mult
+		Escribir Este
+	Fin Para
+	
+FinAlgoritmo
+
+
+Ejercicio 8
+Escribe un programa que pida el límite inferior y superior de un intervalo. Si el límite inferior es 
+mayor que el superior lo tiene que volver a pedir. A continuación, se van introduciendo 
+números hasta que introduzcamos el 0. Cuando termine el programa dará las siguientes 
+informaciones: 
+La suma de los números que están dentro del intervalo (intervalo abierto). 
+Cuantos números están fuera del intervalo. 
+He informa si hemos introducido algún número igual a los límites del intervalo.
+
+8) Algoritmo IntervaloNumeros
+    Definir limite_inferior, limite_superior, numero, suma_dentro, fuera, igual_limite Como Entero
+    
+    Repetir
+        Escribir "Introduce el límite inferior:"
+        Leer limite_inferior
+        Escribir "Introduce el límite superior:"
+        Leer limite_superior
+        
+        Si limite_inferior >= limite_superior Entonces
+            Escribir "El límite inferior debe ser menor que el superior. Inténtalo de nuevo."
+        FinSi
+    Hasta Que limite_inferior < limite_superior
+    
+    suma_dentro <- 0
+    fuera <- 0
+    igual_limite <- 0
+    
+    Repetir
+        Escribir "Introduce un número (0 para terminar):"
+        Leer numero
+        
+        Si numero <> 0 Entonces
+            Si numero > limite_inferior Y numero < limite_superior Entonces
+                suma_dentro <- suma_dentro + numero
+            SiNo
+                fuera <- fuera + 1
+            FinSi
+            
+            Si numero = limite_inferior O numero = limite_superior Entonces
+                igual_limite <- 1
+            FinSi
+        FinSi
+    Hasta Que numero = 0
+    
+    Escribir "Suma de los números dentro del intervalo (sin contar los límites): " suma_dentro
+    Escribir "Cantidad de números fuera del intervalo: " fuera
+    
+    Si igual_limite = 1 Entonces
+        Escribir "Se introdujo al menos un número igual a los límites del intervalo."
+    SiNo
+        Escribir "No se introdujo ningún número igual a los límites del intervalo."
+    FinSi
+
+FinAlgoritmo
+
+
+Ejercicio 9 
+Escribe un programa que, dados dos números, uno real (base) y un entero positivo 
+(exponente), saque por pantalla el resultado de la potencia. No se puede utilizar el operador 
+de potencia.
+
+9) Algoritmo Los_factorial
+	
+	Leer A
+	
+	Si A < 0 Entonces
+		Escribir "No debe ser un numero negativo"
+	SiNo
+		Esto <- 1
+		Para I<-1 Hasta A
+			Esto <- Esto * I
+		Fin Para
+	Fin Si
+	
+	Escribir "El factorial de " A " Es: " Esto
+FinAlgoritmo
+
+
+Ejercicio 10 
+Algoritmo que muestre la tabla de multiplicar de los números 1,2,3,4 y 5.
+
+10) Algoritmo Tablas_1a5
+	
+	Repetir
+		Escribir "Pon Un numero del 1 al 5"
+		Leer Mult
+		Si Mult > 5 O Mult < 1 Entonces
+			Escribir "Numero o caracter invalido"
+		Fin Si
+	Hasta Que Mult <= 5 Y Mult >= 1
+	
+	Escribir "Su tabla del 1 al 10 es:"
+	Para A <- 1 Hasta 10
+		Este <- A * Mult
+		Escribir Este
+	Fin Para
+	
+FinAlgoritmo
+
+
+
