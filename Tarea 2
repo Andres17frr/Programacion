@@ -40,7 +40,7 @@ cada mes deposita cantidades variables de dinero; además, se quiere saber cuán
 ahorrado cada mes.
 
 12:
-Algoritmo 	Ahorrado
+Algoritmo Ahorrado
 	
 	Para Mes<-1 Hasta 12 Hacer
 		Segun Mes Hacer
@@ -84,7 +84,7 @@ semana (seis días) y requiere determinar el total de éstas, así como el sueld
 las horas trabajadas.
 
 13:
-Algoritmo sin_titulo
+Algoritmo SueldoA
 	
 	Escribir "Escribe el sueldo por hora"
 	Leer SueldoXhora
@@ -323,7 +323,6 @@ Algoritmo Number
 		
 	Fin Mientras
 
-	
 FinAlgoritmo
 
 
