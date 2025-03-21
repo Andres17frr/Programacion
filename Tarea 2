@@ -1,0 +1,329 @@
+Ejercicio 11 
+Escribe un programa que diga si un número introducido por teclado es o no primo. Un número 
+primo es aquel que sólo es divisible entre él mismo y la unidad. Nota: Es suficiente probar 
+hasta la raíz cuadrada del número para ver si es divisible por algún otro número. 
+
+11:
+Algoritmo Numero_Primo_NoPrimo
+	
+	Definir Num, i Como Entero
+	Definir esPrimo Como Logico
+	
+	Escribir "Escribe un numero"
+	Leer Num
+	
+	Si Num < 2 Entonces
+        Escribir Num, " No es primo"
+    Sino
+        esPrimo <- Verdadero
+        i <- 2
+        Mientras i <= RC(Num) Y esPrimo Hacer 
+            Si Num MOD i = 0 Entonces
+                esPrimo <- Falso
+            FinSi
+            i <- i + 1
+        FinMientras
+		
+        Si esPrimo Entonces
+            Escribir Num, " Es primo"
+        Sino
+            Escribir Num, " No es primo"
+        FinSi
+    FinSi
+	
+FinAlgoritmo
+
+
+Ejercicio 12 
+Realizar un algoritmo para determinar cuánto ahorrará una persona en un año, si al final de 
+cada mes deposita cantidades variables de dinero; además, se quiere saber cuánto lleva 
+ahorrado cada mes.
+
+12:
+Algoritmo 	Ahorrado
+	
+	Para Mes<-1 Hasta 12 Hacer
+		Segun Mes Hacer
+			1: Escribir "Introduzca el dinero ahorrado enero"
+				Leer Ahorro1
+			2: Escribir "Introduzca el dinero ahorrado febrero"
+				Leer Ahorro2
+			3: Escribir "Introduzca el dinero ahorrado marzo"
+				Leer Ahorro3
+			4: Escribir "Introduzca el dinero ahorrado abril"
+				Leer Ahorro4
+			5: Escribir "Introduzca el dinero ahorrado mayo"
+				Leer Ahorro5
+			6: Escribir "Introduzca el dinero ahorrado junio"
+				Leer Ahorro6
+			7: Escribir "Introduzca el dinero ahorrado julio"
+				Leer Ahorro7
+			8: Escribir "Introduzca el dinero ahorrado agosto"
+				Leer Ahorro8
+			9: Escribir "Introduzca el dinero ahorrado septiembre"
+				Leer Ahorro9
+			10: Escribir "Introduzca el dinero ahorrado octubre"
+				Leer Ahorro10
+			11: Escribir "Introduzca el dinero ahorrado noviembre"
+				Leer Ahorro11
+			12: Escribir "Introduzca el dinero ahorrado diciembre"
+				Leer Ahorro12
+		Fin Segun
+	Fin Para
+	
+	Aquello <- Ahorro1 + Ahorro2 + Ahorro3 + Ahorro4 + Ahorro5 + Ahorro6 +Ahorro7 +Ahorro8 +Ahorro9 + Ahorro10 + Ahorro11 + Ahorro12
+	
+	Escribir "Se tiene ahorrado al año: " Aquello
+	
+FinAlgoritmo
+
+
+Ejercicio 13 
+Una empresa tiene el registro de las horas que trabaja diariamente un empleado durante la 
+semana (seis días) y requiere determinar el total de éstas, así como el sueldo que recibirá por 
+las horas trabajadas.
+
+13:
+Algoritmo sin_titulo
+	
+	Escribir "Escribe el sueldo por hora"
+	Leer SueldoXhora
+	
+	SueldoXdia <- SueldoXhora * Hora1 
+	
+	Para Dias<-1 Hasta 6 Hacer
+		Segun Dias Hacer
+			1:Escribir "Introduzca las horas trabajadas el lunes"
+				Leer Hora1
+				SueldoXdia1 <- SueldoXhora * Hora1 
+				Escribir "El sueldo del dia es: " SueldoXdia1
+			2:Escribir "Introduzca las horas trabajadas el martes"
+				Leer Hora2
+				SueldoXdia2 <- SueldoXhora * Hora2
+				Escribir "El sueldo del dia es: " SueldoXdia2
+			3:Escribir "Introduzca las horas trabajadas el miercoles"
+				Leer Hora3
+				SueldoXdia3 <- SueldoXhora * Hora3 
+				Escribir "El sueldo del dia es: " SueldoXdia3
+			4:Escribir "Introduzca las horas trabajadas el jueves"
+				Leer Hora4
+				SueldoXdia4 <- SueldoXhora * Hora4 
+				Escribir "El sueldo del dia es: " SueldoXdia4
+			5:Escribir "Introduzca las horas trabajadas el viernes"
+				Leer Hora5
+				SueldoXdia5 <- SueldoXhora * Hora5 
+				Escribir "El sueldo del dia es: " SueldoXdia5
+			6:Escribir "Introduzca las horas trabajadas el sabado"
+				Leer Hora6
+				SueldoXdia6 <- SueldoXhora * Hora6 
+				Escribir "El sueldo del dia es: " SueldoXdia6
+		Fin Segun
+	Fin Para
+	
+	HorasTotal <- Hora1 + Hora2 + Hora3 + Hora4 + Hora5 + Hora6
+	SueldoTotal <- SueldoXdia1 + SueldoXdia2 + SueldoXdia3 + SueldoXdia4 + SueldoXdia5 + SueldoXdia6
+	
+	Escribir "El total de horas trabajadas es: " HorasTotal " Y el sueldo total es: " SueldoTotal
+	
+FinAlgoritmo
+
+
+Ejercicio 14 
+Una persona se encuentra en el kilómetro 70 de una carretera, otra se encuentra en el km 150, 
+los coches tienen sentido opuesto y tienen la misma velocidad. Realizar un programa para 
+determinar en qué kilómetro de esa carretera se encontrarán.
+
+14: 
+Algoritmo PuntoEncuentro
+    Definir posA, posB, Encuentro Como Real
+    EsoA <- 70
+	EsoB <- 150
+	
+	Encuentro <- (EsoA + EsoB) / 2
+    
+    Escribir "Los dos autos se encontrarán en el kilómetro: ", Encuentro
+FinAlgoritmo
+
+
+Ejercicio 15 
+Una persona adquirió un producto para pagar en 20 meses. El primer mes pagó 10 €, el 
+segundo 20 €, el tercero 40 € y así sucesivamente. Realizar un algoritmo para determinar 
+cuánto debe pagar mensualmente y el total de lo que pagó después de los 20 meses.
+
+15:
+Algoritmo El_Total
+	
+	Aquello <- 5
+	
+	Para Ello<-1 Hasta 20 Hacer
+		Aquello <- Aquello + Aquello
+		SumaTotal <- SumaTotal + Aquello
+		Escribir "Tuvo que pagar el mes " Ello " un total: " Aquello 
+	Fin Para
+	
+	Escribir "El total a pagar en 20 meses es :" SumaTotal
+FinAlgoritmo
+
+
+Ejercicio 16 
+Una empresa les paga a sus empleados con base en las horas trabajadas en la semana. Realice 
+un algoritmo para determinar el sueldo semanal de N trabajadores y, además, calcule cuánto 
+pagó la empresa por los N empleados.
+
+16:
+Algoritmo SueldoSemana
+    Definir N, SueldoPorHora, I, HorasTrabajadas, SueldoSem, TotalPagado Como Real
+    
+    Escribir "Ingrese el número de empleados:"
+    Leer N
+    Escribir "Ingrese el sueldo por hora:"
+    Leer SueldoPorHora
+    
+    TotalPagado <- 0 
+    
+    Para I <- 1 Hasta N Hacer
+        Escribir "Ingrese las horas trabajadas en la semana del empleado ", I, ":"
+        Leer HorasTrabajadas
+        
+        SueldoSem <- HorasTrabajadas * SueldoPorHora 
+        Escribir "El sueldo del empleado ", I, " es: ", SueldoSem
+        
+        TotalPagado <- TotalPagado + SueldoSem 
+    FinPara
+    
+    Escribir "El total pagado por la empresa a todos los empleados es: ", TotalPagado
+FinAlgoritmo
+
+
+Ejercicio 17 
+Una empresa les paga a sus empleados con base en las horas trabajadas en la semana. Para 
+esto, se registran los días que trabajó y las horas de cada día. Realice un algoritmo para 
+determinar el sueldo semanal de N trabajadores y además calcule cuánto pagó la empresa por 
+los N empleados.
+
+17:
+Algoritmo Sueldo_Semanal
+	
+	Definir N, i, j, DiasTrabajados, HorasDia Como Entero
+	Definir PagoHora, SueldoEmpleado, TotalEmpresa Como Real
+	
+	Escribir "Ingrese el número de empleados:"
+	Leer N
+	Escribir "Ingrese el pago por hora:"
+	Leer PagoHora
+	
+	TotalEmpresa <- 0 
+	
+	Para i <- 1 Hasta N Hacer
+		Escribir "Empleado ", i
+		Escribir "Ingrese la cantidad de días trabajados en la semana:"
+		Leer DiasTrabajados
+		
+		SueldoEmpleado <- 0
+		
+		Para j <- 1 Hasta DiasTrabajados Hacer
+			Escribir "Ingrese las horas trabajadas el día ", j, ":"
+			Leer HorasDia
+			SueldoEmpleado <- SueldoEmpleado + (HorasDia * PagoHora)
+		FinPara
+		
+		Escribir "El sueldo del empleado ", i, " es: $", SueldoEmpleado
+		TotalEmpresa <- TotalEmpresa + SueldoEmpleado
+	FinPara
+	
+	Escribir "El total pagado por la empresa es: $", TotalEmpresa
+	
+FinAlgoritmo
+
+
+Ejercicio 18 
+Hacer un programa que muestre un cronometro, indicando las horas, minutos y segundos.
+
+18:
+Algoritmo Cronom
+	Definir horas, minutos, segundos Como Entero
+	horas <- 0
+	minutos <- 0
+	segundos <- 0
+	
+	Escribir "Cronómetro iniciado"
+	
+	Mientras Verdadero Hacer
+		Escribir horas, ":", minutos, ":", segundos
+		
+		Esperar 1 Segundos
+		
+		segundos <- segundos + 1
+		
+		Si segundos = 60 Entonces
+			segundos <- 0
+			minutos <- minutos + 1
+		FinSi
+		
+		Si minutos = 60 Entonces
+			minutos <- 0
+			horas <- horas + 1
+		FinSi
+	FinMientras
+FinAlgoritmo
+
+
+Ejercicio 19 
+Realizar un ejemplo de menú, donde podemos escoger las distintas opciones hasta que 
+seleccionamos la opción de “Salir”.
+
+19:
+Algoritmo Menu
+	
+	Escribir "1: Hamburguesa 12000"
+	Escribir "2: Pollo 5000"
+	Escribir "3: Salchipapa 10000"
+	
+	Repetir
+		Escribir "Elige una opcion para ver su contenido o escribe 4 para salir"
+		Leer Elegir
+		Segun Elegir Hacer
+		1: Escribir "Hamburguesa: Pan, carne, lechuga, tomate, huevo"
+		2: Escribir "Pollo: Pollo entero, papa, salsa"
+		3: Escribir "Papas fritas, salchicha, lechuga, salsa"
+		Fin Segun
+	Hasta Que Elegir = 4
+FinAlgoritmo
+
+
+Ejercicio 20 
+Mostrar en pantalla los N primero número primos. Se pide por teclado la cantidad de números 
+primos que queremos mostrar.
+
+20:
+Algoritmo Number
+	
+	Escribir "Ingrese numeros primos a mostrar:"
+	Leer N
+	
+	Contador <- 0
+	Num <- 2
+	
+	Mientras Contador < N Hacer
+		esPrimo <- Verdadero
+        i <- 2
+        Mientras i <= RC(Num) Y esPrimo Hacer 
+            Si Num MOD i = 0 Entonces
+                esPrimo <- Falso
+            FinSi
+            i <- i + 1
+        FinMientras
+		
+		Si esPrimo Entonces
+			Escribir Num
+			Contador <- Contador + 1
+		FinSi
+		
+		Num <- Num + 1
+		
+	Fin Mientras
+
+	
+FinAlgoritmo
+
+
